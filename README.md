@@ -32,12 +32,12 @@
 
 ## Usage
 
-**Custom Bootloader**
+### Custom Bootloader
 1. **Update:** Use button 1 to trigger a firmware update. The bootloader will jump to the Firmware Receiver to receive and install new firmware.
 2. **Start:** Use button 2 to start the firmware. The bootloader checks for valid firmware at the specified address `NEW_FIRMWARE_START_ADDRESS` and jumps to it if found. If no valid firmware is found, it displays a "No Updates" message.
-**Firmware Receiver**
+### Firmware Receiver
 In ECU1, and handles CAN communication and receive the new firmware from ECU2 over CAN and flash the new version to address `0x0800dc00`.
-**Firmware Sender**
+### Firmware Sender
 In ECU2, Communicates over CAN, serves new updates to ECU1.
-**New Firmware**
+### New Firmware
 This the New firmware received by ECU1 from ECU2.
